@@ -1,0 +1,511 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('Lato/Lato-Bold.woff2') format('woff2'),
+        url('Lato/Lato-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('Lato/Lato-Black.woff2') format('woff2'),
+        url('Lato/Lato-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('Lato/Lato-BlackItalic.woff2') format('woff2'),
+        url('Lato/Lato-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('Lato/Lato-BoldItalic.woff2') format('woff2'),
+        url('Lato/Lato-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('Lato/Lato-LightItalic.woff2') format('woff2'),
+        url('Lato/Lato-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('Lato/Lato-Light.woff2') format('woff2'),
+        url('Lato/Lato-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('Lato/Lato-Italic.woff2') format('woff2'),
+        url('Lato/Lato-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato Hairline';
+    src: url('Lato/Lato-Hairline.woff2') format('woff2'),
+        url('Lato/Lato-Hairline.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato Hairline';
+    src: url('Lato/Lato-HairlineItalic.woff2') format('woff2'),
+        url('Lato/Lato-HairlineItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('Lato/Lato-Regular.woff2') format('woff2'),
+        url('Lato/Lato-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* css reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Lato";
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background: #F5F8FA;
+  padding: 30px 40px;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg,
+label {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+nav {
+  padding-block-end: 30px;
+  border-bottom: 2px solid #e0e6ea;
+  display: flex;
+  justify-content: space-between;
+}
+.right-navigation {
+  padding-block-start: 11px;
+  padding-block-end: 12px;
+  ol {
+    padding: 0;
+    list-style-type: none;
+  }
+  ol li {
+    display: inline;
+    --spacing: 42px;
+
+    &:not(:last-of-type) {
+      /*   logical properties   */
+      margin-inline-end: var(--spacing);
+    }
+    a {
+      color: #1d2c3c;
+      text-decoration: none;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: -0.01px;
+      padding-block: 11px 12px;
+      padding-inline: 19px 20px;
+
+      &:hover {
+        border-radius: 6px;
+        border: 2px solid #646E7A;
+        outline-color: #646E7A;
+      }
+    }
+  }
+}
+.main{
+    position: relative;
+    margin: 0 auto;
+}
+.container{
+    display: flex;
+    margin-inline: 16.18% 18%;
+    margin-block: 85px 33px ;
+    border-radius: 6px;
+    background: #FFF;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05), 0px 15px 35px 0px rgba(43, 64, 78, 0.10);
+}
+
+.left-container{
+    width: 42.64vw;
+    header{
+        padding-inline:48px ;
+        padding-block-start: 41px;
+        padding-block-end: 24px;
+        border-bottom: 2px solid #F5F7FA;
+    }
+    h2{
+        color: #1D2C3C;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-size: 30px;
+        font-weight: 400;
+        padding-block-end: 9px;
+    }
+}
+
+.circle{
+        width: 30px;
+        height: 30px;
+        border:2px solid #548BC5;
+        border-radius: 50%;
+        text-align: center;
+        color: #548BC5;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: -0.142px;
+    }
+.basic{
+    padding-inline:48px ;
+    padding-block-start: 36px;
+    padding-block-end: 26px;
+    border-bottom: 2px solid #F5F7FA ;
+
+    .header{
+        display: flex;
+        gap: 10px;
+        padding-block:1px ;
+        margin-block-end: 9px;
+    }
+
+    h3{
+        font-size: 18px;
+        color: #1D2C3C;
+        letter-spacing: -0.16px;
+    }
+    
+}
+
+.input-row{
+    display: flex;
+    gap: 30px;
+    margin-block-end: 15px;
+
+    > div {
+    flex: 1; 
+    > input {
+      width: 100%;
+      max-width: 370px;
+      border-radius: 4px;
+      border: 1px solid #FFFFFF;
+      background: #EDEFF2;
+      padding-block: 4px;
+      padding-inline-start: 13px;
+      flex-shrink: 0;
+    }
+    >input::placeholder{
+        color: #646E7A;
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+}
+label{
+    color: #1D2C3C;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    margin-block-end: 7px;
+}
+.payment{
+    padding-inline:49px 48px ;
+    padding-block-start: 33px;
+    padding-block-end: 23px;
+    border-bottom: 2px solid #F5F7FA ;
+    
+    .header{
+        display: flex;
+        gap: 10px;
+        padding-block:1px ;
+        margin-block-end: 45px;
+
+        h3{
+        font-size: 18px;
+        color: #1D2C3C;
+        letter-spacing: -0.16px;
+    }
+    }
+    .credit-card-group {
+	backface-visibility: hidden;
+	perspective: 1000;
+	background: #EDEFF2;
+    border-radius: 4px;
+    border: 1px solid #FFFFFF;
+	padding: 4px;
+	margin-bottom: 0;
+	position: relative;
+    width: 100%;
+
+	input {
+		background: transparent;
+		border: 0;
+		box-shadow: none;
+		outline: 0;
+		padding: 0;
+		padding: 4.5px 0px 4.5px;
+	}
+    label {
+    position: absolute;
+    display: inline-block;
+    top: -1.75em;
+    left: -0.1em;
+    font-size: 14px;
+    font-weight: 400;
+    color: #1D2C3C;
+    }
+    input::placeholder{
+        color: #646E7A;
+        font-size: 14px;
+        font-weight: 400;
+    }
+  }
+}
+.card-number {
+	width: 45%;
+    padding-left: 1em;
+}
+.card-cvv {
+		width: 7%;
+}
+.card-expiration{
+		width: 45%;
+}
+.button{
+    padding-inline:48px ;
+    padding-block-start: 39px;
+}
+
+button {
+    width: 100%;
+    padding-block: 13px;
+    margin-block-end: 23px;
+    background-color: #038E7D;
+    border-radius: 5px;
+    border: 1px solid #f0f0f0;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.396px;
+}
+
+.left-container-footer{
+    padding-inline:48px ;
+    padding-block-end: 46.9px;
+
+    .top-footer{
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 31px;
+        span.bold{
+            color: #1D2C3C;
+        }
+        p{
+            color: #646E7A;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: -0.01px;
+        }
+    }
+    .bottom-footer{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.right-container{
+    background-color: #1179BF;
+    border-radius: 0px 6px 6px 0px;
+    padding-block-start: 4%;
+    padding-inline: 6% 5%;
+
+    color: #FFFFFF;
+    width: 22.94vw;
+}
+.price{
+    margin-block-end: 36px;
+    h3{
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -0.01px;
+    }
+    p{
+        font-size: 60px;
+        font-weight: 300;
+        letter-spacing: -0.015px;
+    }
+    sup{
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: -0.015px;
+    }
+    sub{
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: -0.015px;
+    }
+    p.italic{
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+        letter-spacing: -0.008px;
+    }
+}
+.offers{
+    margin-block-end: 38px;
+
+    ul {
+            list-style-type: none;
+            padding: 0;
+        }
+    ul li {
+            background-image: url('Combined\ Shape.png');
+            background-repeat: no-repeat; 
+            background-position: left center;
+            padding-left: 25px; 
+            &:not(:last-of-type) {
+                /*   logical properties   */
+                margin-block-end: 12px;
+            }
+        }
+}
+span.bold{
+    font-weight: 700;
+}
+span.italic{
+    font-style: italic;
+}
+span.underline{
+    text-decoration:underline;
+    text-decoration-color:#B9F5FF;
+}
+.help{
+    border-bottom: 4px solid rgba(185,245,255,0.5036);
+    margin-block-end: 41px;
+}
+.side-bar{
+    border-bottom: 2px solid rgba(255,255,255,0.2005);
+    
+}
+blockquote{
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 24px; /* 133.333% */
+    letter-spacing: -0.009px;
+    margin-block-start: 41px;
+    margin-block-end: 17px;
+}
+
+.circular-image{
+    border-radius: 50%;
+}
+.image{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.image-name{
+    font-size: 16px;
+    letter-spacing: -0.008px;
+}
+.main-footer{
+    p{
+        font-size: 14px;
+        text-align: center;
+        color: #636B6F;
+        font-size: 14px;
+        font-weight: 400;
+
+        a{
+        color: #31708F;
+        text-decoration: none;
+        }
+    }
+    
+}
